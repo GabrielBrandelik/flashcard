@@ -3,29 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Conexão Campo e Cidade</title>
     <link rel="stylesheet" href="style.css">
-    <title>Flashcard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main>
-        <section id="container">
-            <!-- <article class="cartao">
-                <div class="cartao__conteudo">
-                    <h3>Programação</h3>
-                    <div class="cartao__conteudo__pergunta">
-                        <p>O que é JavaScript?</p>
-                    </div>
-                    <div class="cartao__conteudo__resposta">
-                        <p>O JavaScript é uma linguagem de programação</p>
-                    </div>
+    <div class="quiz-container">
+        <header>
+            <h1>Quiz: Conexão Campo e Cidade</h1>
+            <p class="score">Pontuação: <span id="score">0</span></p>
+        </header>
+
+        <main>
+            <div id="start-screen" class="quiz-screen active">
+                <h2>Teste seu conhecimento sobre a relação entre campo e cidade!</h2>
+                <p>Este quiz contém 10 perguntas sobre a interdependência entre áreas urbanas e rurais.</p>
+                <button id="start-btn">Começar Quiz</button>
+            </div>
+
+            <div id="quiz-screen" class="quiz-screen">
+                <div class="question-header">
+                    <span id="question-number">Pergunta 1/10</span>
+                    <span id="timer">Tempo: 30s</span>
                 </div>
-            </article> -->
-        </section>
-    </main>
-    <footer>
-        <p>Projeto desenvolvido por Gabriel, sem nenhum fim lucrativo</p>
-    </footer>
-    <script src="app.js"></script>
+                
+                <h2 id="question-text">Carregando pergunta...</h2>
+                
+                <div id="options-container" class="options-container">
+                    <!-- Opções serão inseridas aqui via JavaScript -->
+                </div>
+                
+                <div class="feedback" id="feedback"></div>
+                
+                <button id="next-btn" disabled>Próxima Pergunta</button>
+            </div>
+
+            <div id="results-screen" class="quiz-screen">
+                <h2>Resultado Final</h2>
+                <div class="result-circle">
+                    <span id="final-score">0</span>/10
+                </div>
+                <p id="result-message">Mensagem de resultado</p>
+                <button id="restart-btn">Jogar Novamente</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Projeto desenvolvido para conscientização sobre a conexão campo-cidade</p>
+        </footer>
+    </div>
+
     <script src="pergunta.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
